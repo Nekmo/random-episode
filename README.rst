@@ -77,3 +77,12 @@ The options are:
 * **players**: by default chromecast (with type chromecast) and native (with type native).
     * **type**: optional. By default native.
     * **cmd**: Command to execute in native type.
+
+
+Install
+=======
+If you have ``pip`` installed, you can install it with:
+
+.. code:: bash
+
+    sudo pip install random-episode
