@@ -3,6 +3,7 @@
 from yaml import load
 
 from random_episode.exceptions import ConfigException
+from random_episode.players import exec_player
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -30,3 +31,13 @@ class Config(dict):
         if 'directories' not in playlist:
             raise ConfigException('You must specify a directories in the playlist {}'.format(playlist_name))
         return playlist
+
+    def get_player(self, player_name):
+        if player_name is None:
+            return
+        if not player_name in self['players']:
+            raise ValueError('{} is not a configured player_name.'.format(player_name))
+        return self['players'][player_name]
+
+    def exec_player(self, path, player_name='native'):
+        return exec_player(path, **self.get_player(player_name))

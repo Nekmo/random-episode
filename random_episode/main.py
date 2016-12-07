@@ -6,10 +6,10 @@ from random_episode.players import exec_player
 
 
 class RandomEpisode(object):
-    def __init__(self, config_path, playlist_name=None, player='native'):
+    def __init__(self, config_path, playlist_name=None, player_name='native'):
         self.config = Config(config_path)
         self.playlist = self.config.get_playlist(playlist_name)
-        self.player = player
+        self.player_name = player_name
 
     def get_directories(self):
         if self.playlist is None:
@@ -20,7 +20,7 @@ class RandomEpisode(object):
         return get_random_episode(self.get_directories())
 
     def play_episode(self, episode):
-        exec_player(episode.path)
+        self.config.exec_player(episode.path, self.player_name)
 
     def play_random(self):
         episode = self.get_random_episode()

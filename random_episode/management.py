@@ -90,4 +90,4 @@ def execute_from_command_line(argv=None):
     create_logger('random-episode', args.loglevel)
 
     if not getattr(args, 'which', None) or args.which == 'start':
-        RandomEpisode(args.config).play_random()
+        RandomEpisode(args.config, args.playlist, args.player).play_random()

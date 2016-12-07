@@ -8,8 +8,9 @@ def execute(args):
     subprocess.Popen(args)
 
 
-def chromecast(path):
-    args = [CHROMECAST_CMD]
+def chromecast(path, cmd=None):
+    cmd = cmd or CHROMECAST_CMD
+    args = [cmd]
     if not path.endswith('mp4'):
         args += ['-transcode']
     execute(args + [path])
@@ -29,5 +30,5 @@ def native(path, cmd=None):
             return
 
 
-def exec_player(path, etype='native'):
-    return  globals()[etype](path)
+def exec_player(path, type='native', cmd=None):
+    return globals()[type](path, cmd)

@@ -10,3 +10,5 @@ playlists:
 players:
     Kurisu:
         type: chromecast
+    Mpv:
+        cmd: mpv
