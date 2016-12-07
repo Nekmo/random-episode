@@ -109,3 +109,10 @@ If you have ``pip`` installed, you can install it with:
 .. code:: bash
 
     sudo pip install random-episode
+
+License
+=======
+This project is under the MIT license.
+
+*The Simpsons*, *The simpsons logo image* and *Futurama* are owned by 20th Century Fox Television.
+*Friends* is owned by Warner Bros. Television.
