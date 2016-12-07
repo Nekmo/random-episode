@@ -5,7 +5,8 @@ COMMON_PLAYERS = ['xdg-open', 'bomi', 'vlc', 'smplayer', 'totem', 'mpv', 'mplaye
 
 
 def execute(args):
-    subprocess.Popen(args)
+    p = subprocess.Popen(args)
+    p.communicate()
 
 
 def chromecast(path, cmd=None):
