@@ -90,4 +90,5 @@ ENV/
 
 # Created by .ignore support plugin (hsz.mobi)
 /random-episode.yml
+/random-episode.xcf
 .idea

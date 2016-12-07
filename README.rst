@@ -1,4 +1,27 @@
 
+.. image:: https://raw.githubusercontent.com/Nekmo/random-episode/master/random-episode.png
+    :width: 100%
+
+|
+
+.. image:: https://img.shields.io/pypi/v/random-episode.svg?style=flat-square
+  :target: https://pypi.org/project/random-episode/
+  :alt: Latest PyPI version
+
+.. image:: https://img.shields.io/pypi/pyversions/random-episode.svg?style=flat-square
+  :target: https://pypi.org/project/random-episode/
+  :alt: Python versions
+
+.. image:: https://img.shields.io/codeclimate/github/Nekmo/random-episode.svg?style=flat-square
+  :target: https://codeclimate.com/github/Nekmo/random-episode
+  :alt: Code Climate
+
+.. image:: https://img.shields.io/requires/github/Nekmo/random-episode.svg?style=flat-square
+     :target: https://requires.io/github/Nekmo/random-episode/requirements/?branch=master
+     :alt: Requirements Status
+
+
+
 Play Random Episode
 ###################
 Play a random chapter of your favorite series, like *The Simpsons*, *Futurama*, *Friends*...
