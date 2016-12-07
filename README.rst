@@ -30,10 +30,10 @@ The syntax is:
 
 The available parameters are:
 
-    * ``<config_path>``: by default it is ``random-episode.yml``.
-    * ``<player>``: by default it is ``native`` (default video player). ``chromecast`` is also available.
-    You can define others in the configuration.
-    * ``<playlist>``: you must define the playlists in the configuration.
+* ``<config_path>``: by default it is ``random-episode.yml``.
+* ``<player>``: by default it is ``native`` (default video player). ``chromecast`` is also available.
+You can define others in the configuration.
+* ``<playlist>``: you must define the playlists in the configuration.
 
 
 Configuration
