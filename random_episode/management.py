@@ -80,8 +80,8 @@ def execute_from_command_line(argv=None):
 
     parse_oneshot = parser.sub.add_parser('start', help='Play random episode.')
     parse_oneshot.set_defaults(which='start')
-    parse_oneshot.add_argument('playlist', nargs='?', default=None)
     parse_oneshot.add_argument('player', nargs='?', default='native')
+    parse_oneshot.add_argument('playlist', nargs='?', default=None)
 
 
     parser.set_default_subparser('start')

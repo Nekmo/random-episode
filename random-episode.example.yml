@@ -1,18 +1,19 @@
 playlists:
-    groening:
-        directories:
+    groening:  # playlist name
+        directories:  # Multiple directories
           - '/path/to/simpsons/'
           - '/path/to/futurama/'
         recursive: true  # Optional
         patterns:  # Optional
-          - '*.mkv'
+          - '*.mkv'  # file pattern
           - '*.mp4'
           - '*.avi'
-    simpsons-t1:
+    simpsons-t1:  # playlist name
         directories: '/path/to/simpsons/The Simpsons/'
         patterns: 'The Simpsons 1x*'
 players:
-    Kurisu:
-        type: chromecast
-    Mpv:
-        cmd: mpv
+    chromecast-player:  # player name
+        type: chromecast  # chromecast or native
+    vlc:  # player name
+        # default type: native
+        cmd: vlc  # command to execute
