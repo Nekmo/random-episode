@@ -1,0 +1,18 @@
+playlists:
+    groening:
+        directories:
+          - '/path/to/simpsons/'
+          - '/path/to/futurama/'
+        recursive: true  # Optional
+        patterns:  # Optional
+          - '*.mkv'
+          - '*.mp4'
+          - '*.avi'
+    simpsons-t1:
+        directories: '/path/to/simpsons/The Simpsons/'
+        patterns: 'The Simpsons 1x*'
+players:
+    Kurisu:
+        type: chromecast
+    Mpv:
+        cmd: mpv
