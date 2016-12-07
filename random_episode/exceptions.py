@@ -1,0 +1,5 @@
+
+
+
+class ConfigException(Exception):
+    pass

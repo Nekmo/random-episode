@@ -1,0 +1,12 @@
+playlists:
+    simpsons:
+        directories:
+          - '/media/nekraid02/Series/Los Simpsons/'
+        recursive: true
+        patterns:
+          - '*.mkv'
+          - '*.mp4'
+          - '*.avi'
+players:
+    Kurisu:
+        type: chromecast

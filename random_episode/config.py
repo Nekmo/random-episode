@@ -1,0 +1,32 @@
+
+
+from yaml import load
+
+from random_episode.exceptions import ConfigException
+
+try:
+    from yaml import CLoader as Loader, CDumper as Dumper
+except ImportError:
+    from yaml import Loader, Dumper
+
+
+class Config(dict):
+    def __init__(self, file, **kwargs):
+        super().__init__(**kwargs)
+        self.file = file
+        self.read()
+
+    def read(self):
+        self.update(load(open(self.file), Loader))
+        self['playlists'] = self.get('playlists', {})
+        self['players'] = self.get('players', {})
+
+    def get_playlist(self, playlist_name):
+        if playlist_name is None:
+            return
+        if not playlist_name in self['playlists']:
+            raise ValueError('{} is not a configured playlist.'.format(playlist_name))
+        playlist = self['playlists'][playlist_name]
+        if 'directories' not in playlist:
+            raise ConfigException('You must specify a directories in the playlist {}'.format(playlist_name))
+        return playlist

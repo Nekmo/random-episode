@@ -6,6 +6,7 @@ import logging
 
 import sys
 
+from random_episode.main import RandomEpisode
 
 CONFIG_FILE = 'random-episode.yml'
 
@@ -77,21 +78,16 @@ def execute_from_command_line(argv=None):
                         const=5, default=logging.INFO)
     parser.sub = parser.add_subparsers()
 
-    parse_service = parser.sub.add_parser('discovery', help='Discover Amazon Dash device on network.')
-    parse_service.set_defaults(which='discovery')
-
-    parse_oneshot = parser.sub.add_parser('run', help='Run server')
-    parse_oneshot.set_defaults(which='run')
-    parse_oneshot.add_argument('--root-allowed', action='store_true')
+    parse_oneshot = parser.sub.add_parser('start', help='Play random episode.')
+    parse_oneshot.set_defaults(which='start')
+    parse_oneshot.add_argument('playlist', nargs='?', default=None)
+    parse_oneshot.add_argument('player', nargs='?', default='native')
 
 
-    parser.set_default_subparser('run')
+    parser.set_default_subparser('start')
     args = parser.parse_args(argv[1:])
 
-    create_logger('amazon-dash', args.loglevel)
+    create_logger('random-episode', args.loglevel)
 
-    if not getattr(args, 'which', None) or args.which == 'run':
-        Listener(args.config).run(root_allowed=args.root_allowed)
-    elif args.which == 'discovery':
-        from amazon_dash.discovery import discover
-        discover()
+    if not getattr(args, 'which', None) or args.which == 'start':
+        RandomEpisode(args.config).play_random()
