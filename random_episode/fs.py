@@ -1,11 +1,6 @@
 import random
 
-import os
-
 from os3.fs.shortcuts import ls
-
-
-DIRECTORY = os.environ.get('DIRECTORY', '/media/nekraid02/Series/Los Simpsons/')
 
 
 def get_episodes(directories):

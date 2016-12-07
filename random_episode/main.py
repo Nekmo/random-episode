@@ -2,7 +2,6 @@ import os
 
 from random_episode.config import Config
 from random_episode.fs import get_random_episode
-from random_episode.players import exec_player
 
 
 class RandomEpisode(object):
