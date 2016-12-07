@@ -5,11 +5,11 @@ Play a random chapter of your favorite series, like *The Simpsons*, *Futurama*, 
 
 With this program you can:
 
-    - Define **multiple directories** as a source.
-    - Optional support for **subdirectories**.
-    - Use **patterns** to filter files.
-    - Choose a **video player**, or let it choose one automatically.
-    - Native support for **chromecast**.
+- Define **multiple directories** as a source.
+- Optional support for **subdirectories**.
+- Use **patterns** to filter files.
+- Choose a **video player**, or let it choose one automatically.
+- Native support for **chromecast**.
 
 How to use it
 =============
@@ -70,10 +70,10 @@ Using a configuration file you can define playlists and players. An example:
 
 The options are:
 
-    * **playlists**:
-        * **directories**: required. A list or just one.
-        * **recursive**: optional. ``true`` or ``false``. Search for episodes recursively into subdirectories,
-        * **patterns**: optional. A list or just one. Check the file names.
-    * **players**: by default chromecast (with type chromecast) and native (with type native).
-        * **type**: optional. By default native.
-        * **cmd**: Command to execute in native type.
+* **playlists**:
+    * **directories**: required. A list or just one.
+    * **recursive**: optional. ``true`` or ``false``. Search for episodes recursively into subdirectories,
+    * **patterns**: optional. A list or just one. Check the file names.
+* **players**: by default chromecast (with type chromecast) and native (with type native).
+    * **type**: optional. By default native.
+    * **cmd**: Command to execute in native type.
