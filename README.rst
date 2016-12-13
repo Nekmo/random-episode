@@ -110,6 +110,26 @@ If you have ``pip`` installed, you can install it with:
 
     sudo pip install random-episode
 
+
+Amazon Dash
+===========
+It's easy to use Random Episode with your Amazon Dash. You just need to install::
+
+    $ pip install amazon-dash
+
+Then configure in Amazon Dash:
+
+.. code:: yaml
+
+    # amazon-dash.yml
+    # ---------------
+
+    44:65:0D:48:FA:88:
+      name: Pompadour
+      user: nekmo
+      cmd: random-episode chromecast simpsons
+
+
 License
 =======
 This project is under the MIT license.
